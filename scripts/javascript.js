@@ -1,45 +1,3 @@
-let arrayOfDogs = [
-    {
-      name: 'Aron',
-      breed: 'Golden Retriever',
-      hair: 'Medium',
-      size: 'Large',
-      age: 1,
-      color: 'Golden'
-    },
-    {
-      name: 'Jack',
-      breed: 'Fox terrier',
-      hair: 'Short',
-      size: 'Medium',
-      age: 10,
-      color: 'White-brown'
-    },
-    {
-      name: 'Hector',
-      breed: 'Dogo Argentino',
-      hair: 'Short',
-      size: 'Extra large',
-      age: 1,
-      color: 'White'
-    },
-    {
-      name: 'Alfa',
-      breed: 'Great Dane',
-      hair: 'Short',
-      size: 'Extra large',
-      age: 5,
-      color: 'Gray'
-    },
-    {
-      name: 'Bono',
-      breed: 'French bulldog',
-      hair: 'Short',
-      size: 'Small',
-      age: 6,
-      color: 'Black'
-    }
-  ];
 
   //Selectors 
 
@@ -57,7 +15,6 @@ let arrayOfDogs = [
     
   })
   
-  // Prasanje, zasto sto i da pisam dole vo .then vo zagradata mi go vrakja objektot so dogs, malce me zbuni toa
   .then(dogs =>{
       console.log(dogs)
 
@@ -82,11 +39,9 @@ let arrayOfDogs = [
   td3.innerText = dogs[i].hair,
   td4.innerText = dogs[i].size
 
-  if (dogs[i].age < 1){
-    td5.innerText = 'Puppy'
-   }else {td5.innerText = dogs[i].age
-  }
-  
+
+  dogs[i].age <= 1 ? td5.innerText = 'Puppy' : td5.innerText = dogs[i].age
+
   td6.innerText = dogs[i].color,
   
   
@@ -104,14 +59,6 @@ let arrayOfDogs = [
   })
 
 
-  
-
-  
-
-  
-
-
-   
 
   .catch((error) =>{
     console.log(error);
